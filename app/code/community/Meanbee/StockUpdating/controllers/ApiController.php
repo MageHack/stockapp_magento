@@ -44,17 +44,19 @@ class Meanbee_StockUpdating_ApiController extends Mage_Core_Controller_Front_Act
             $stock_data->addQty($qty);
             $stock_data->save();
 
-            return $this->_success('Product updated successfully');
+            return $this->_success('Product (' . $product->getName() . ') updated successfully');
         } catch (Exception $e) {
             return $this->_error('An exception occurred: ' . $e->getMessage());
         }
     }
 
     protected function _error($message, $code = 403) {
+        $this->_getHelper()->log("ERROR: $code - $message", Zend_Log::ERR);
         return $this->_return('ERROR', $message, $code);
     }
 
     protected function _success($message) {
+        $this->_getHelper()->log("SUCCESS: $message", Zend_Log::INFO);
         return $this->_return('OK', $message, 200);
     }
 

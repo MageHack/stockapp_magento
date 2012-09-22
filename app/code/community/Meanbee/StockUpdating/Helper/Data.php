@@ -21,4 +21,8 @@ class Meanbee_StockUpdating_Helper_Data extends Mage_Core_Helper_Data {
 
         return false;
     }
+
+    public function log($message, $log = Zend_Log::DEBUG) {
+        Mage::log($message, $log, 'meanbee_stockupdating.log', true);
+    }
 }
