@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Meanbee_StockUpdating>
+            <version>1.0.0</version>
+        </Meanbee_StockUpdating>
+    </modules>
+    <global>
+        <models>
+            <meanbee_stockupdating>
+                <class>Meanbee_StockUpdating_Model</class>
+            </meanbee_stockupdating>
+        </models>
+        <helpers>
+            <meanbee_stockupdating>
+                <class>Meanbee_StockUpdating_Helper</class>
+            </meanbee_stockupdating>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <meanbee_stockupdating>
+                <use>standard</use>
+                <args>
+                    <module>Meanbee_StockUpdating</module>
+                    <frontName>stockupdate</frontName>
+                </args>
+            </meanbee_stockupdating>
+        </routers>
+    </frontend>
+    <phpunit>
+        <suite>
+            <modules>
+                <Meanbee_StockUpdating />
+            </modules>
+        </suite>
+    </phpunit>
+</config>
