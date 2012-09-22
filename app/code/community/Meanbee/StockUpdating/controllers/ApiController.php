@@ -31,8 +31,8 @@ class Meanbee_StockUpdating_ApiController extends Mage_Core_Controller_Front_Act
             /** @var $product Mage_Catalog_Model_Product */
             $product = Mage::getModel('catalog/product')->loadByAttribute($this->_getConfig()->getBarcodeAttribute(), $barcode);
 
-            if (!$product->getId()) {
-                $this->_error('Product not found');
+            if (!$product || !$product->getId()) {
+                return $this->_error('Product not found');
             }
 
             /**

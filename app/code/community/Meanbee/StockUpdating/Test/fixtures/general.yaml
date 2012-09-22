@@ -1,0 +1,4 @@
+config:
+  default/cataloginventory/meanbee_stockupdating/active: 1
+  default/cataloginventory/meanbee_stockupdating/api_key: thisismyapikey
+  default/cataloginventory/meanbee_stockupdating/barcode_attribute: barcode
