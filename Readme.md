@@ -1,6 +1,6 @@
 # Stock App
 
-An iOS app that allows Magento administrators to update their product stock levels using a barcode and an iPhone.
+An iOS app that allows Magento administrators to update their product stock levels using a barcode and an iPhone.  You can see an awesome (!) video of it in action at https://vimeo.com/50003370.
 
 ![image](http://dl.dropbox.com/u/192363/github/stockapp/ios_scan.png)
 ![image](http://dl.dropbox.com/u/192363/github/stockapp/ios_qty.png)
